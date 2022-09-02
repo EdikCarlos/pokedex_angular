@@ -1,0 +1,12 @@
+<div class="pokemon-list">
+    <div class="pokemon-list-logo">
+        <img src="https://pokedex.sleduardo.dev/img/logo.svg" alt="Pokedex">
+    </div>
+    <div class="pokemon-list-group">
+        <app-pokemon-card 
+        *ngFor="let pokemon of PokeService.pokemons; let i = index"
+        [nomePokemon]="pokemon.name"
+        [idPokemon]="i + 1"
+        ></app-pokemon-card>
+    </div>
+</div>
